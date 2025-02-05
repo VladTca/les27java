@@ -35,7 +35,7 @@ public class Main {
         warrior1.levelUp();
         mage1.levelUp();
         archer2.levelUp();
-        System.out.println("Здоровье воина 3:"+warrior3.getHealth());
+        System.out.println("Здоровье Warrior3: "+warrior3.getHealth());
         warrior1.attack(warrior3);
         mage1.attack(warrior3);
         warrior3.setShield(true);

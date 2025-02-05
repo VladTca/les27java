@@ -1,19 +1,20 @@
 abstract class GameCharacter {
     private String name;
     private int health=100;
-    private int level =0;
+    private int level =1;
 
     public GameCharacter(String name) {
         this.name = name;
     }
 
     public void levelUp(){
+        System.out.println("Персонаж "+name+" повысил уровень с "+level+" на "+(level+1));
         level++;
     }
     public void damage(int damage){
         health-=damage;
     }
-     abstract void attack();
+     abstract void attack(GameCharacter character);
 
     public String getName() {
         return name;

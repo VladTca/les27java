@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         final int DAMAGE = 10;
+
+        // первое задание----------------------------
         Warrior warrior1 = new Warrior("Warrior1");
         Warrior warrior2 = new Warrior("Warrior2");
         Warrior warrior3 = new Warrior("Warrior3");
@@ -18,7 +20,7 @@ public class Main {
             banda[5]=archer3;
             banda[6]=mage1;
             for (GameCharacter character : banda) {
-                character.attack();
+                character.attack(warrior1);
             }
         System.out.println();
             archer2.damage(10);
@@ -26,5 +28,18 @@ public class Main {
             warrior2.damage(DAMAGE);
             warrior2.setShield(true);
             warrior2.damage(DAMAGE);
+//----------------------------------------------------------------
+        System.out.println();
+        // второе задание----------------------------
+        warrior1.levelUp();
+        warrior1.levelUp();
+        mage1.levelUp();
+        archer2.levelUp();
+        System.out.println("Здоровье воина 3:"+warrior3.getHealth());
+        warrior1.attack(warrior3);
+        mage1.attack(warrior3);
+        warrior3.setShield(true);
+        archer2.attack(warrior3);
+          
     }
 }
